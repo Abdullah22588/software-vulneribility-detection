@@ -1,0 +1,3 @@
+✅  No known vulnerabilities detected in safe_code1.py
+⚠️  Vulnerability Detected: Hardcoded Password in vulnerable_code1.py at line 5 (variable: password)
+⚠️  Vulnerability Detected: SQL Injection (concat in variable 'query') in vulnerable_code1.py at line 7
