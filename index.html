@@ -177,18 +177,17 @@
             width: 100%;
         }
         
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
             padding: 8rem 5% 4rem;
-            text-align: center;
         }
         
-        .hero-content {
-            max-width: 900px;
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            margin-bottom: 4rem;
             animation: fadeInUp 1s ease;
         }
         
@@ -200,7 +199,7 @@
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 500;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             backdrop-filter: blur(10px);
         }
         
@@ -210,223 +209,216 @@
         }
         
         h1 {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             background: linear-gradient(135deg, var(--text) 0%, var(--primary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        .hero p {
-            font-size: 1.3rem;
+        .subtitle {
+            font-size: 1.2rem;
             color: var(--text-muted);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             line-height: 1.8;
         }
         
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
+        /* Upload Section */
+        .upload-section {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
         }
         
-        .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 12px;
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .upload-zone {
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            margin-bottom: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .upload-zone.dragover {
+            border-color: var(--primary);
+            background: rgba(59, 130, 246, 0.1);
+        }
+        
+        .upload-content {
+            padding: 3rem;
+        }
+        
+        .upload-icon {
+            font-size: 4rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .upload-zone h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .upload-zone p {
+            color: var(--text-muted);
+        }
+        
+        .browse-btn {
+            color: var(--primary);
             font-weight: 600;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .file-info {
+            color: var(--success) !important;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
             font-size: 1.1rem;
-            text-decoration: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
-            cursor: pointer;
-            border: none;
         }
         
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        .cta-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: var(--dark-lighter);
+            box-shadow: none;
         }
         
-        .btn-primary:hover {
+        .cta-button:not(:disabled):hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
         }
         
-        .btn-secondary {
-            background: var(--glass-bg);
-            color: var(--text);
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(10px);
+        /* Results Section */
+        .results-section {
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.5s ease;
         }
         
-        .btn-secondary:hover {
-            background: var(--dark-lighter);
-            border-color: var(--primary);
-        }
-        
-        /* Features Section */
-        .section {
-            padding: 6rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
+        .hidden {
+            display: none;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem;
         }
         
         .section-header h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             background: linear-gradient(135deg, var(--text) 0%, var(--primary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        .section-header p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature-card {
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 2.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
             backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            color: var(--success);
         }
         
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-        }
-        
-        .feature-card:hover::before {
-            opacity: 0.05;
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .feature-card p {
-            color: var(--text-muted);
-            line-height: 1.7;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Tech Stack */
-        .tech-stack {
-            background: var(--dark-light);
-            padding: 6rem 5%;
-        }
-        
-        .tech-grid {
+        .results-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 2rem;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
-        .tech-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+        .result-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
         
-        .tech-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
+        #vuln-card h3 i {
+            color: var(--danger);
         }
         
-        .tech-item i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        #safe-card h3 i {
+            color: var(--success);
         }
         
-        .tech-item h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
+        .result-list {
+            list-style: none;
         }
         
-        /* Automata Visuals */
+        .result-list li {
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            margin-bottom: 0.75rem;
+            border-radius: 12px;
+            border-left: 4px solid transparent;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        #vuln-list li {
+            border-left-color: var(--danger);
+            color: #fca5a5;
+        }
+        
+        #safe-list li {
+            border-left-color: var(--success);
+            color: #86efac;
+        }
+        
+        /* Visuals Section */
         .visuals-section {
-            background: var(--dark);
+            margin-bottom: 4rem;
         }
         
         .visuals-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2.5rem;
-        }
-        
-        .visual-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .visual-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
         }
         
         .visual-card h3 {
@@ -450,68 +442,18 @@
             border-radius: 8px;
         }
         
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 6rem 5%;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
-            opacity: 0.3;
-        }
-        
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .cta-section h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-        
-        .cta-section p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .btn-white {
-            background: white;
-            color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn-white:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-        
         /* Footer */
         footer {
             background: var(--dark-light);
             padding: 3rem 5%;
             text-align: center;
             border-top: 1px solid var(--glass-border);
+            margin-top: 4rem;
         }
         
         footer p {
             color: var(--text-muted);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         
         .social-links {
@@ -550,7 +492,7 @@
                 font-size: 2.5rem;
             }
             
-            .hero p {
+            .subtitle {
                 font-size: 1.1rem;
             }
             
@@ -558,17 +500,17 @@
                 font-size: 2rem;
             }
             
-            .cta-section h2 {
-                font-size: 2rem;
-            }
-            
             .nav-links {
                 display: none;
             }
             
-            .features-grid,
+            .results-grid,
             .visuals-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 6rem 5% 2rem;
             }
         }
     </style>
@@ -589,172 +531,98 @@
                 <span>CodeSentinel</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#tech">Technology</a></li>
+                <li><a href="#upload">Analyze</a></li>
                 <li><a href="#visuals">Automata</a></li>
                 <li><a href="https://github.com/Abdullah22588/software-vulneribility-detection" target="_blank">GitHub</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
             <div class="hero-badge">
                 <i class="ri-sparkling-fill"></i>
                 Research Prototype - Automata Theory
             </div>
-            <h1>Software Vulnerability Detection</h1>
-            <p>
-                Advanced security analysis powered by Finite Automata and Abstract Syntax Tree (AST) parsing. 
-                Detect SQL injection, hardcoded credentials, and other critical vulnerabilities in Python code.
+            <h1>CodeSentinel</h1>
+            <p class="subtitle">
+                Next-Gen Automata-Based Vulnerability Detection<br>
+                Upload your Python code and detect SQL injection, hardcoded credentials, and more
             </p>
-            <div class="cta-buttons">
-                <a href="https://github.com/Abdullah22588/software-vulneribility-detection" target="_blank" class="btn btn-primary">
-                    <i class="ri-github-fill"></i>
-                    View on GitHub
-                </a>
-                <a href="#features" class="btn btn-secondary">
-                    <i class="ri-arrow-down-line"></i>
-                    Learn More
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features" class="section">
-        <div class="section-header">
-            <h2>Core Features</h2>
-            <p>State-of-the-art vulnerability detection using theoretical computer science</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <i class="ri-bug-line feature-icon"></i>
-                <h3>Automata-Based Detection</h3>
-                <p>
-                    Leverages Finite Automata theory to model and detect complex vulnerability patterns 
-                    with high precision and minimal false positives.
-                </p>
-            </div>
-            <div class="feature-card">
-                <i class="ri-code-s-slash-line feature-icon"></i>
-                <h3>AST Analysis</h3>
-                <p>
-                    Deep Abstract Syntax Tree parsing to understand code structure and identify 
-                    security flaws at the semantic level.
-                </p>
-            </div>
-            <div class="feature-card">
-                <i class="ri-database-2-line feature-icon"></i>
-                <h3>SQL Injection Detection</h3>
-                <p>
-                    Identifies dangerous SQL query construction patterns and recommends 
-                    parameterized queries for secure database interactions.
-                </p>
-            </div>
-            <div class="feature-card">
-                <i class="ri-key-2-line feature-icon"></i>
-                <h3>Credential Scanning</h3>
-                <p>
-                    Detects hardcoded passwords, API keys, and sensitive credentials 
-                    embedded in source code.
-                </p>
-            </div>
-            <div class="feature-card">
-                <i class="ri-eye-line feature-icon"></i>
-                <h3>Visual Automata</h3>
-                <p>
-                    Generates beautiful state diagrams of detection automata for 
-                    educational and debugging purposes.
-                </p>
-            </div>
-            <div class="feature-card">
-                <i class="ri-upload-cloud-2-line feature-icon"></i>
-                <h3>Web Interface</h3>
-                <p>
-                    Modern Flask-based web application with drag-and-drop file upload 
-                    and real-time analysis results.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack -->
-    <section id="tech" class="tech-stack">
-        <div class="section-header">
-            <h2>Technology Stack</h2>
-            <p>Built with modern tools and frameworks</p>
-        </div>
-        <div class="tech-grid">
-            <div class="tech-item">
-                <i class="ri-python-line"></i>
-                <h4>Python</h4>
-            </div>
-            <div class="tech-item">
-                <i class="ri-flask-line"></i>
-                <h4>Flask</h4>
-            </div>
-            <div class="tech-item">
-                <i class="ri-code-box-line"></i>
-                <h4>AST Parser</h4>
-            </div>
-            <div class="tech-item">
-                <i class="ri-git-branch-line"></i>
-                <h4>Graphviz</h4>
-            </div>
-            <div class="tech-item">
-                <i class="ri-html5-line"></i>
-                <h4>HTML/CSS</h4>
-            </div>
-            <div class="tech-item">
-                <i class="ri-javascript-line"></i>
-                <h4>JavaScript</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- Automata Visuals -->
-    <section id="visuals" class="section visuals-section">
-        <div class="section-header">
-            <h2>Automata Patterns</h2>
-            <p>Finite Automata used for vulnerability detection</p>
-        </div>
-        <div class="visuals-grid">
-            <div class="visual-card">
-                <h3>SQL Injection Pattern</h3>
-                <div class="image-container">
-                    <img src="results/SQL_Injection.gv.png" alt="SQL Injection Automata" onerror="this.parentElement.innerHTML='<p style=\'color: #94a3b8; padding: 2rem;\'>Automata diagram will be generated when you run the application</p>'">
+        <!-- Upload Section -->
+        <section id="upload" class="upload-section">
+            <div class="glass-card upload-zone" id="drop-zone">
+                <input type="file" id="file-input" hidden accept=".py">
+                <div class="upload-content">
+                    <i class="ri-upload-cloud-2-line upload-icon"></i>
+                    <h3>Drag & Drop your Python Code here</h3>
+                    <p>or <span class="browse-btn">Browse Files</span></p>
+                    <p class="file-info" id="file-name"></p>
                 </div>
             </div>
-            <div class="visual-card">
-                <h3>Hardcoded Password Pattern</h3>
-                <div class="image-container">
-                    <img src="results/Hardcoded_Password.gv.png" alt="Hardcoded Password Automata" onerror="this.parentElement.innerHTML='<p style=\'color: #94a3b8; padding: 2rem;\'>Automata diagram will be generated when you run the application</p>'">
-                </div>
+            <div style="text-align: center;">
+                <button id="analyze-btn" class="cta-button" disabled>
+                    <i class="ri-radar-line"></i> Run Analysis
+                </button>
             </div>
-            <div class="visual-card">
-                <h3>Safe SQL Flow Pattern</h3>
-                <div class="image-container">
-                    <img src="results/Safe_SQL_Flow.gv.png" alt="Safe SQL Flow Automata" onerror="this.parentElement.innerHTML='<p style=\'color: #94a3b8; padding: 2rem;\'>Automata diagram will be generated when you run the application</p>'">
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>Ready to Secure Your Code?</h2>
-            <p>
-                Explore the source code, contribute to the project, or run it locally to analyze your Python applications.
-            </p>
-            <a href="https://github.com/Abdullah22588/software-vulneribility-detection" target="_blank" class="btn btn-white">
-                <i class="ri-github-fill"></i>
-                Get Started on GitHub
-            </a>
-        </div>
-    </section>
+        <!-- Results Section -->
+        <section class="results-section hidden" id="results-section">
+            <div class="section-header">
+                <h2>Analysis Results</h2>
+                <div class="status-badge" id="status-badge">Processing...</div>
+            </div>
+            
+            <div class="results-grid">
+                <div class="glass-card result-card" id="vuln-card">
+                    <h3><i class="ri-alarm-warning-line"></i> Vulnerabilities</h3>
+                    <ul id="vuln-list" class="result-list">
+                        <!-- Items go here -->
+                    </ul>
+                </div>
+                
+                <div class="glass-card result-card" id="safe-card">
+                    <h3><i class="ri-shield-check-line"></i> Safety Checks</h3>
+                    <ul id="safe-list" class="result-list">
+                        <!-- Items go here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Automata Visuals -->
+        <section id="visuals" class="visuals-section">
+            <div class="section-header">
+                <h2>Automata Patterns</h2>
+                <p class="subtitle">Finite Automata used for vulnerability detection</p>
+            </div>
+            <div class="visuals-grid">
+                <div class="glass-card visual-card">
+                    <h3>SQL Injection Pattern</h3>
+                    <div class="image-container">
+                        <img src="results/SQL_Injection.gv.png" alt="SQL Injection Automata" onerror="this.parentElement.innerHTML='<p style=\'color: #94a3b8; padding: 2rem;\'>Automata diagram will be generated when you run the Flask application</p>'">
+                    </div>
+                </div>
+                <div class="glass-card visual-card">
+                    <h3>Hardcoded Password Pattern</h3>
+                    <div class="image-container">
+                        <img src="results/Hardcoded_Password.gv.png" alt="Hardcoded Password Automata" onerror="this.parentElement.innerHTML='<p style=\'color: #94a3b8; padding: 2rem;\'>Automata diagram will be generated when you run the Flask application</p>'">
+                    </div>
+                </div>
+                <div class="glass-card visual-card">
+                    <h3>Safe SQL Flow Pattern</h3>
+                    <div class="image-container">
+                        <img src="results/Safe_SQL_Flow.gv.png" alt="Safe SQL Flow Automata" onerror="this.parentElement.innerHTML='<p style=\'color: #94a3b8; padding: 2rem;\'>Automata diagram will be generated when you run the Flask application</p>'">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -795,22 +663,130 @@
             });
         });
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+        // File Upload Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropZone = document.getElementById('drop-zone');
+            const fileInput = document.getElementById('file-input');
+            const analyzeBtn = document.getElementById('analyze-btn');
+            const resultsSection = document.getElementById('results-section');
+            const fileNameDisplay = document.getElementById('file-name');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+            // Drag & Drop handlers
+            dropZone.addEventListener('click', () => fileInput.click());
+
+            dropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropZone.classList.add('dragover');
+            });
+
+            dropZone.addEventListener('dragleave', () => {
+                dropZone.classList.remove('dragover');
+            });
+
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('dragover');
+                if (e.dataTransfer.files.length) {
+                    handleFile(e.dataTransfer.files[0]);
                 }
             });
-        }, observerOptions);
 
-        document.querySelectorAll('.feature-card, .visual-card, .tech-item').forEach(el => {
-            observer.observe(el);
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files.length) {
+                    handleFile(e.target.files[0]);
+                }
+            });
+
+            let currentFile = null;
+
+            function handleFile(file) {
+                if (!file.name.endsWith('.py')) {
+                    alert('Please upload a Python (.py) file.');
+                    return;
+                }
+                currentFile = file;
+                fileNameDisplay.textContent = `Selected: ${file.name}`;
+                analyzeBtn.disabled = false;
+
+                // Reset results
+                resultsSection.classList.add('hidden');
+            }
+
+            // Analyze Click
+            analyzeBtn.addEventListener('click', async () => {
+                if (!currentFile) return;
+
+                analyzeBtn.innerHTML = '<i class="ri-loader-4-line"></i> Analyzing...';
+                analyzeBtn.disabled = true;
+
+                const formData = new FormData();
+                formData.append('file', currentFile);
+
+                try {
+                    const response = await fetch('/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                        renderResults(data.results);
+                    } else {
+                        alert('Error: ' + data.error);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An unexpected error occurred. Make sure the Flask server is running on http://localhost:5000');
+                } finally {
+                    analyzeBtn.innerHTML = '<i class="ri-radar-line"></i> Run Analysis';
+                    analyzeBtn.disabled = false;
+                }
+            });
+
+            function renderResults(results) {
+                resultsSection.classList.remove('hidden');
+                document.getElementById('status-badge').innerText = 'Complete';
+
+                const vulnList = document.getElementById('vuln-list');
+                const safeList = document.getElementById('safe-list');
+
+                vulnList.innerHTML = '';
+                safeList.innerHTML = '';
+
+                // Add Vulnerabilities
+                if (results.vulnerabilities && results.vulnerabilities.length > 0) {
+                    results.vulnerabilities.forEach(msg => {
+                        const li = document.createElement('li');
+                        li.innerText = msg.replace('⚠️', '').trim();
+                        vulnList.appendChild(li);
+                    });
+                } else {
+                    const li = document.createElement('li');
+                    li.innerText = 'No vulnerabilities detected.';
+                    li.style.color = '#fff';
+                    li.style.borderLeftColor = '#aaa';
+                    vulnList.appendChild(li);
+                }
+
+                // Add Safe checks
+                if (results.safe && results.safe.length > 0) {
+                    results.safe.forEach(msg => {
+                        const li = document.createElement('li');
+                        li.innerText = msg.replace('✅', '').trim();
+                        safeList.appendChild(li);
+                    });
+                } else {
+                    const li = document.createElement('li');
+                    li.innerText = 'No safe patterns detected.';
+                    li.style.color = '#fff';
+                    li.style.borderLeftColor = '#aaa';
+                    safeList.appendChild(li);
+                }
+
+                // Scroll to results
+                resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     </script>
 </body>
