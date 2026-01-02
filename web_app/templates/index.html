@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSentinel - Automata Vulnerability Detector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="logo">
+                <i class="ri-shield-check-fill"></i>
+                <h1>CodeSentinel</h1>
+            </div>
+            <p class="subtitle">Next-Gen Automata-Based Vulnerability Detection</p>
+        </header>
+
+        <section class="upload-section">
+            <div class="glass-card upload-zone" id="drop-zone">
+                <input type="file" id="file-input" hidden accept=".py">
+                <div class="upload-content">
+                    <i class="ri-upload-cloud-2-line upload-icon"></i>
+                    <h3>Drag & Drop your Python Code here</h3>
+                    <p>or <span class="browse-btn">Browse Files</span></p>
+                    <p class="file-info" id="file-name"></p>
+                </div>
+            </div>
+            <button id="analyze-btn" class="cta-button" disabled>
+                <i class="ri-radar-line"></i> Run Analysis
+            </button>
+        </section>
+
+        <section class="results-section hidden" id="results-section">
+            <div class="section-header">
+                <h2>Analysis Results</h2>
+                <div class="status-badge" id="status-badge">Processing...</div>
+            </div>
+            
+            <div class="results-grid">
+                <div class="glass-card result-card" id="vuln-card">
+                    <h3><i class="ri-alarm-warning-line"></i> Vulnerabilities</h3>
+                    <ul id="vuln-list" class="result-list">
+                        <!-- Items go here -->
+                    </ul>
+                </div>
+                
+                <div class="glass-card result-card" id="safe-card">
+                    <h3><i class="ri-shield-check-line"></i> Safety Checks</h3>
+                    <ul id="safe-list" class="result-list">
+                        <!-- Items go here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="visuals-section">
+            <div class="section-header">
+                <h2>Automata Patterns</h2>
+                <p>Visualizing the Finite Automata used for detection</p>
+            </div>
+            <div class="visuals-grid">
+                {% for vis in visuals %}
+                <div class="glass-card visual-card">
+                    <h3>{{ vis.name }}</h3>
+                    <div class="image-container">
+                        <img src="/results/{{ vis.filename }}" alt="{{ vis.name }} Automata">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with Flask & Automata Theory | Research Prototype</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
